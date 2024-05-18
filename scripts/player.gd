@@ -2,10 +2,11 @@ extends CharacterBody2D
 
 const SPEED = 100
 var current_direction = "none"
+@onready var _animated_sprite = $AnimatedSprite2D
 
 
 func _ready():
-	$CollisionShape2D/AnimatedSprite2D.play("front_idle")
+	_animated_sprite.play("front_idle")
 
 func _physics_process(delta):
 	player_movement(delta)
@@ -40,7 +41,7 @@ func player_movement(delta):
 
 func play_animation(movement):
 	var direction = current_direction
-	var animation =  $CollisionShape2D/AnimatedSprite2D
+	var animation =  _animated_sprite
 	
 	if direction == "right":
 		animation.flip_h = false
