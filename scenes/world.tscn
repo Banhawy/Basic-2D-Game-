@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cnxcqqbjdmny6"]
+[gd_scene load_steps=10 format=3 uid="uid://cnxcqqbjdmny6"]
 
 [ext_resource type="Texture2D" uid="uid://d2k7pfvkuu5ec" path="res://art/tilesets/plains.png" id="1_ppqje"]
 [ext_resource type="Texture2D" uid="uid://ds7pgcshixhxq" path="res://art/tilesets/grass.png" id="2_xcbh3"]
 [ext_resource type="Texture2D" uid="uid://df85y3dcdmr4q" path="res://art/objects/objects.png" id="3_daue7"]
 [ext_resource type="PackedScene" uid="uid://bbixcovup1gpr" path="res://scenes/player.tscn" id="4_14cjj"]
+[ext_resource type="PackedScene" uid="uid://b88wtbcs4y1p2" path="res://scenes/slime.tscn" id="5_smrso"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qlmgi"]
 texture = ExtResource("1_ppqje")
@@ -410,3 +411,6 @@ layer_2/tile_data = PackedInt32Array(-327689, 655362, 5, -131076, 655362, 5, 327
 
 [node name="player" parent="." instance=ExtResource("4_14cjj")]
 position = Vector2(4, 27)
+
+[node name="slime" parent="." instance=ExtResource("5_smrso")]
+position = Vector2(47, 45)
